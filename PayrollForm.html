@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./PayrollForm.css">
+    <title>Employee Payroll Form</title>
+</head>
+<body>
+<header class="header-content header">
+    <div class="logo-content">
+        <img class="img" src="./assets/images/logo.png" alt=""> 
+    <div>
+        <span class="emp-text">EMPLOYEE</span><br>
+        <span class="emp-text emp-payroll">PAYROLL</span>
+    </div>
+    </div>
+</header>
+    <div id="formID" class="form-content">
+    <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
+    <div class="form-head">Employee Payroll Form</div>
+    <div class="row-content">
+        <label class="label-text" for="name">Name</label>
+        <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
+        <error-output class = "text-error" for="text"></error-output>
+    </div>
+    <div class="row-content">
+        <label for="label-text" for="profile">Profile Image</label>
+        <div class="profile-radio-content">
+            <label>
+                <input type="radio" id="profile1" name="profile" value="./assets/profile-images/Ellipse -3.png">
+                <img class="profile" id='image1' src="./assets/profile-images/Ellipse -3.png">
+            </label>
+            <label>
+                <input type="radio" id="profile2" name="profile" value="./assets/profile-images/Ellipse -1.png">
+                <img class="profile" id='image2' src="./assets/profile-images/Ellipse -1.png">
+            </label>
+            <label>
+                <input type="radio" id="profile3" name="profile" value="./assets/profile-images/Ellipse -8.png">
+                <img class="profile" id='image3' src="./assets/profile-images/Ellipse -8.png">
+            </label>
+            <label>
+                <input type="radio" id="profile4" name="profile" value="./assets/profile-images/Ellipse -7.png">
+                <img class="profile" id='image4' src="./assets/profile-images/Ellipse -7.png">
+            </label>
+            <label>
+                <input type="radio" id="profile5" name="profile" value="./assets/profile-images/Ellipse -10.png"><br>
+                <img class="profile" id='image5' src="./assets/profile-images/Ellipse -10.png">
+            </label>
+        </div>
+    </div>
+        <div class="row-content">
+            <label class="label-text" for="gender">Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label class="text" for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label class="text" for="female">Female</label>
+        </div>
+        <div class="row-content">
+            <label class="label-text" for="department">Department</label>
+                <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                <label class="text" for="hr">HR</label>
+                <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                <label class="text" for="sales">Sales</label>
+                <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                <label class="text" for="finance">Finance</label>
+                <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                <label class="text" for="engineer">Engineer</label>
+                <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                <label class="text" for="others">Others</label>
+            </div>
+        <div class="row-content">
+            <label class="label-text" for="salary">Choose your salary: </label>
+            <input class="input" type="range" name="salary" id="salary" min="500000" max="1000000" step="100" value="500000">
+            <output class="salary-output text" for="salary">500000</output>
+        </div>
+        <div class="row-content">
+        <label class="label-text" for="startDate">Start Date</label> 
+        <select name="Day" id="day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select> 
+        <select name="Month" id="month">
+            <option value="Jan">January</option>
+            <option value="Feb">Febuary</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        <select name="Year" id="year">
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+        </div>
+        <div>
+           <label class="label-text" for="notes">Notes</label> 
+           <textarea class="input" name="Notes" id="notes" placeholder="" style="height: 100px;"></textarea>
+        </div>
+        <div class="buttonParent">
+            <a href="./HomePage.html" class="resetButton button cancelButton">Cancel</a>
+        <div class="submit-reset">
+            <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+            <button type="reset" class="resetButton button">Reset</button>
+        </div>
+        </div>
+       <script>
+        // UC1 - Modify Employee Payroll Class with new Attributes and Getters and Setters
+        class EmployeePayrollData{
+        //getter and setter method
+        get id()
+        {
+            return this._name;
+        } 
+        set id(id){
+            this._id = id;
+        }
+        get name(){
+            return this._name;
+            }
+            set name(name)
+            {
+                let nameREgex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+                if(nameREgex.test(name))
+                this._name = name;
+                else throw 'Name is Incorrect'
+            }
+            get profilePic(){
+                return this._profilePic;
+            }
+            set profilePic(profilePic){
+                this._profilePic = profilePic;
+            }
+            get gender(){
+                return this._gender;
+            }
+            set gender(gender){
+                this._gender = gender;
+            }
+            get department(){
+                return this._department;
+            }
+            set department(department)
+            {
+                this._department = department;
+            }
+            get salary(){
+                return this._salary;
+            }
+            set salary(salary){
+                this._salary = salary;
+            }
+            get note(){
+                return this._note;
+            }
+            set note(note){
+                this._note = note; 
+            }
+            get satrtDate(){
+                return this._startDate;
+            }
+            set satrtDate(satrtDate){
+                this._startDate = satrtDate;
+            }
+            
+            //method
+            toString(){
+                const options = {year : 'numeric', month: 'long', day:'numeric'};
+                const empDate = !this.satrtDate ?"undefined": this.satrtDate.toLocaleDateString("en-US",options);
+                return "id=" + this.id +" ,name = " + this.name + ",gender=" + this.gender + ",profilePic=" + this.profilePic 
+                + ",department=" + this.department +",salary=" + this.salary + ",startDate = " + empDate + ",note=" +this.note;
+            }
+        }
+
+        // UC2 - Ability to set Event Listeners when Document is loaded so as to 
+        window.addEventListener('DOMContentLoaded',(event) => {
+            const name = document.querySelector('#name');
+            const textError =  document.querySelector('.text-error');
+            name.addEventListener('input',function(){
+            if(name.value.length==0){
+                textError.textContent = "";
+                return;
+            }
+            try {
+            (new EmployeePayrollData()).name = name.value;;
+            textError.textContent = ""; 
+            } catch (e) {
+                textError.textContent = e;
+            }  
+            });
+            
+            const salary = document.querySelector('#salary');
+            const output = document.querySelector('.salary-output');
+            output.textContent = salary.value;
+            salary.addEventListener('input',function(){
+                output.textContent = salary.value;
+            
+            });
+        });
+
+        //..........UC3 AND UC4
+        // Ability to save the Employee Payroll Object to Local Storage.
+        // @returns it returns the data in EmployeepayrollData.
+
+        const save = () => {
+            try {
+                let employeePayrollData = createEmployeePayroll();
+                createAndUpdateStorage(employeePayrollData);
+            } catch (e) {
+                return;
+            }
+        }
+
+        function createAndUpdateStorage(employeePayrollData){
+            let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+
+            if(employeePayrollList != undefined){
+                employeePayrollList.push(employeePayrollData);
+            }else{
+                employeePayrollList = [employeePayrollData];
+            }
+            alert(employeePayrollList.toString());
+            localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
+        }
+
+        const createEmployeePayroll = () => {
+            let employeePayrollData = new EmployeePayrollData();
+            try {
+                employeePayrollData.name = getInputValueById('#name');
+            } catch (e) {
+                setTextValue('.text-error',e);
+                throw e;
+            }
+
+            employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
+            employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
+            employeePayrollData.department = getSelectedValues('[name=department]');
+            employeePayrollData.salary = getInputValueById('#salary');
+            employeePayrollData.note = getInputValueById('#notes');
+
+            let date = getInputValueById('#day')+" "+getInputValueById('#month')+" "+getInputValueById('#year');
+            employeePayrollData.date = Date.parse(date);
+            alert(employeePayrollData.toString());
+            return employeePayrollData;
+        }
+        const getSelectedValues = (propertyValue) => {
+                let allItems = document.querySelectorAll(propertyValue);
+                let setItems = [];
+                allItems.forEach(item => {
+                    if(item.checked) setItems.push(item.value);
+                });
+                return setItems;
+        }
+
+        const getInputValueById = (id) => {
+            let value = document.querySelector(id).value;
+            return value;
+        }
+
+        const getInputElementValue = (id) => {
+            let value = document.getElementById(id).value;
+            return value;
+        }
+        
+        // UC5: Ability to reset the form on clicking reset
+        const resetForm = () => {
+            setValue('#name','');
+            unsetSelectedValues('[name=profile]');
+            unsetSelectedValues('[name=gender]');
+            unsetSelectedValues('[name=department]');
+            setValue('#salary','');
+            setValue('#notes','');
+            setValue('#day','1');
+            setValue('#month','January');
+            setValue('#year','2020');
+        }
+
+        const unsetSelectedValues = (propertyValue) => {
+            let allItems = document.querySelectorAll(propertyValue);
+            allItems.forEach(item => {
+                item.checked = false;
+            });
+        }
+
+        const setTextValue = (id, value) => {
+            const element = document.querySelector(id);
+            element.textContent = value;
+        }
+
+        const setValue = (id, value) => {
+            const element = document.querySelector(id);
+            element.value = value;
+        }    
+        </script>
+        </form>
+        </div>
+        </body>
+        </html>
